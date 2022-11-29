@@ -1,7 +1,12 @@
 import os
 import pathlib
 import shutil
+import argparse
+import requests
 
+import html2text
+
+BASE_URL = "https://adventofcode.com/2021/"
 
 NEIGHBORS = [(1, 0), (1, 1), (0, 1), (-1, 1), (-1, 0), (-1, -1), (0, -1), (1, -1)]
 NEIGHBORS_ORTH = [(1, 0), (0, 1), (-1, 0), (0, -1)]
@@ -34,5 +39,47 @@ def create_folder_structure():
         exercise_filename = f"exercise_{day_number}.py"
         shutil.copy((os.path.join(cwd, "template.py")), os.path.join(newdir_path, exercise_filename))
 
+def download_problem_for_day(day):
+
+    day_url = BASE_URL + f"day/{str(day)}"
+    gh_cookie = os.environ.get("GH_COOKIE")
+    day_number = str(day).zfill(2)
+    cwd = pathlib.Path().resolve()
+
+    response = requests.get(day_url, headers={"cookie":gh_cookie})
+    parsed_response = html2text.html2text(response.text)
+
+    # drop header nonsense
+    parsed_response = parsed_response.split("## \\")[1]
+
+    # extract example
+    example = parsed_response.split("\n\n    \n    \n    ")[1].split("\n\n")[0]
+    example = "\n".join([item.strip() for item in example.split("\n")[:-1]])
+    example_path = os.path.join(cwd, day_number, f"inputtest.txt")
+    with open(example_path, "w+") as file:
+        file.write(example)
+
+    # get problem text
+    parsed_response = parsed_response.split("To play, please")[0].strip("\n")
+    txt_path = os.path.join(cwd, day_number, f"{day_number}.txt")
+    with open(txt_path, "w+") as file:
+        file.write(parsed_response)
+
+    # get puzzle input
+    if gh_cookie:
+        response = requests.get(day_url + "/input", headers={"cookie": gh_cookie})
+        parsed_response = str(response.text).strip("\n")
+        input_path = example_path = os.path.join(cwd, day_number, f"input.txt")
+        with open(input_path, "w+") as file:
+            file.write(parsed_response)
+
+
 if __name__ == "__main__":
-    create_folder_structure()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-i', '--init', action='store_true')
+    parser.add_argument('-d', '--day', type=int, help="Day to pull down")
+    args = parser.parse_args()
+    if args.init:
+        create_folder_structure()
+    if args.day:
+        download_problem_for_day(args.day)
