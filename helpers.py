@@ -6,7 +6,8 @@ import requests
 
 import html2text
 
-BASE_URL = "https://adventofcode.com/2021/"
+YEAR = "2022"
+BASE_URL = f"https://adventofcode.com/"
 
 NEIGHBORS = [(1, 0), (1, 1), (0, 1), (-1, 1), (-1, 0), (-1, -1), (0, -1), (1, -1)]
 NEIGHBORS_ORTH = [(1, 0), (0, 1), (-1, 0), (0, -1)]
@@ -39,9 +40,10 @@ def create_folder_structure():
         exercise_filename = f"exercise_{day_number}.py"
         shutil.copy((os.path.join(cwd, "template.py")), os.path.join(newdir_path, exercise_filename))
 
-def download_problem_for_day(day):
+def download_problem_for_day(day, year=YEAR):
 
-    day_url = BASE_URL + f"day/{str(day)}"
+    year = year if year else YEAR
+    day_url = BASE_URL + f"{year}/day/{str(day)}"
     gh_cookie = os.environ.get("GH_COOKIE")
     day_number = str(day).zfill(2)
     cwd = pathlib.Path().resolve()
@@ -78,8 +80,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('-i', '--init', action='store_true')
     parser.add_argument('-d', '--day', type=int, help="Day to pull down")
+    parser.add_argument('-y', '--year', type=int, help="AoC year to target")
     args = parser.parse_args()
     if args.init:
         create_folder_structure()
     if args.day:
-        download_problem_for_day(args.day)
+        download_problem_for_day(args.day, year=args.year)
