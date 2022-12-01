@@ -76,6 +76,16 @@ def download_problem_for_day(day, year=YEAR):
             file.write(parsed_response)
 
 
+def post_answer(day, answer, level=1, year=YEAR):
+    year = year if year else YEAR
+    day_url = BASE_URL + f"{year}/day/{str(day)}"
+    gh_cookie = os.environ.get("GH_COOKIE")
+    body = {"answer": str(answer), "level": level}
+    response = requests.post(day_url + "/answer", data=body, headers={"cookie": gh_cookie})
+    print(response.text)
+    return response
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('-i', '--init', action='store_true')
