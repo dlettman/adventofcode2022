@@ -3,6 +3,7 @@ import pathlib
 import shutil
 import argparse
 import requests
+import re
 
 import html2text
 
@@ -55,8 +56,11 @@ def download_problem_for_day(day, year=YEAR):
     parsed_response = parsed_response.split("## \\")[1]
 
     # extract example
-    example = parsed_response.split("\n\n    \n    \n    ")[1].split("\n\n")[0]
-    example = "\n".join([item.strip() for item in example.split("\n")[:-1]])
+    text = response.text
+    example_start = text.split("For example")[1]
+    regex = "<pre><code>(.*?)</code></pre>"
+    example = re.findall(regex, example_start, re.DOTALL)[-1].strip("\n")
+    example = "\n".join([item for item in example.split("\n")])
     example_path = os.path.join(cwd, day_number, f"inputtest.txt")
     with open(example_path, "w+") as file:
         file.write(example)
@@ -66,6 +70,24 @@ def download_problem_for_day(day, year=YEAR):
     txt_path = os.path.join(cwd, day_number, f"{day_number}.txt")
     with open(txt_path, "w+") as file:
         file.write(parsed_response)
+
+    # get example answer
+    try:
+        text = response.text
+        regex = "<em><code>(.*?)</code></em>"
+        answer = re.findall(regex, text, re.DOTALL)[-1]
+        example_path = os.path.join(cwd, day_number, f"example_answer.txt")
+        with open(example_path, "w+") as file:
+            file.write(answer)
+    except IndexError:
+        try:
+            regex = "<code><em>(.*?)</em></code>"
+            answer = re.findall(regex, text, re.DOTALL)[-1]
+            example_path = os.path.join(cwd, day_number, f"example_answer.txt")
+            with open(example_path, "w+") as file:
+                file.write(answer)
+        except IndexError:
+            print("Looks like there's something funky going on with the example answer")
 
     # get puzzle input
     if gh_cookie:

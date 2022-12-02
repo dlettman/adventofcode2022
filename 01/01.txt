@@ -63,10 +63,4 @@ by the fourth Elf).
 Find the Elf carrying the most Calories. _How many total Calories is that Elf
 carrying?_
 
-To begin, [get your puzzle input](1/input).
-
-Answer:
-
-You can also [Shareon
-[Twitter](https://twitter.com/intent/tweet?text=%22Calorie+Counting%22+%2D+Day+1+%2D+Advent+of+Code+2022&url=https%3A%2F%2Fadventofcode%2Ecom%2F2022%2Fday%2F1&related=ericwastl&hashtags=AdventOfCode)
-[Mastodon](javascript:void\(0\);)] this puzzle.
+Your puzzle answer was `69836`.
