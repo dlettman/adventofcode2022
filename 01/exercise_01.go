@@ -12,6 +12,7 @@ func part1(input_filename string) string {
 	elves := make([]int, 0)
 	curr_tot := 0
 	file, _ := os.Open(input_filename)
+	defer file.Close()
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		text := scanner.Text()
@@ -32,6 +33,7 @@ func part2(input_filename string) string {
 	elves := make([]int, 0)
 	curr_tot := 0
 	file, _ := os.Open(input_filename)
+	defer file.Close()
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		text := scanner.Text()
