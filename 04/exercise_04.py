@@ -1,5 +1,3 @@
-import sys
-sys.path.append("..")
 import helpers
 
 def get_mins_and_maxes(line):

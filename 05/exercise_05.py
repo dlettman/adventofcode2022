@@ -1,5 +1,3 @@
-import sys
-sys.path.append("..")
 import helpers
 
 def part_one(input_filename):

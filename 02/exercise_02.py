@@ -1,5 +1,3 @@
-import sys
-sys.path.append("..")
 import helpers
 
 SYMBOL_SCORE_MAP = {"X": 1, "Y": 2, "Z": 3}
