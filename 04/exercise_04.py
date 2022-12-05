@@ -1,4 +1,4 @@
-import helpers
+from helpers import helpers
 
 def get_mins_and_maxes(line):
     elf1, elf2 = line.split(",")

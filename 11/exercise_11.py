@@ -1,4 +1,4 @@
-import helpers
+from helpers import helpers
 
 def part_one(input_filename):
     input = helpers.parse_input(input_filename)

@@ -1,4 +1,4 @@
-import helpers
+from helpers import helpers
 
 SYMBOL_SCORE_MAP = {"X": 1, "Y": 2, "Z": 3}
 SCORE_NESTED_MAP = {"A": {"X": 3, "Y": 6, "Z": 0}, "B": {"X": 0, "Y": 3, "Z": 6}, "C": {"X": 6, "Y": 0, "Z": 3}}

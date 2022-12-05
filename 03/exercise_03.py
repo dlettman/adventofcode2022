@@ -1,4 +1,4 @@
-import helpers
+from helpers import helpers
 
 
 LETTERS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
