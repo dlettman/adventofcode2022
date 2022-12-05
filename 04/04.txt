@@ -62,10 +62,4 @@ In this example, there are `_2_` such pairs.
 
 _In how many assignment pairs does one range fully contain the other?_
 
-To begin, [get your puzzle input](4/input).
-
-Answer:
-
-You can also [Shareon
-[Twitter](https://twitter.com/intent/tweet?text=%22Camp+Cleanup%22+%2D+Day+4+%2D+Advent+of+Code+2022&url=https%3A%2F%2Fadventofcode%2Ecom%2F2022%2Fday%2F4&related=ericwastl&hashtags=AdventOfCode)
-[Mastodon](javascript:void\(0\);)] this puzzle.
+Your puzzle answer was `530`.

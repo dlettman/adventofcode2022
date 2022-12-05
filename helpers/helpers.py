@@ -41,6 +41,7 @@ def create_folder_structure():
         exercise_filename = f"exercise_{day_number}.py"
         shutil.copy((os.path.join(cwd, "template.py")), os.path.join(newdir_path, exercise_filename))
 
+
 def download_problem_for_day(day, year=YEAR):
 
     year = year if year else YEAR

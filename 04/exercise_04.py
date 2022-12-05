@@ -1,10 +1,12 @@
 from helpers import helpers
 
+
 def get_mins_and_maxes(line):
     elf1, elf2 = line.split(",")
     elf1_min, elf1_max = [int(item) for item in elf1.split("-")]
     elf2_min, elf2_max = [int(item) for item in elf2.split("-")]
     return (elf1_min, elf1_max, elf2_min, elf2_max)
+
 
 def part_one(input_filename):
     input = helpers.parse_input(input_filename)
@@ -14,6 +16,7 @@ def part_one(input_filename):
         if (elf1_min <= elf2_min and elf1_max >= elf2_max) or (elf1_min >= elf2_min and elf1_max <= elf2_max):
             containers += 1
     return containers
+
 
 def part_two(input_filename):
     input = helpers.parse_input(input_filename)
@@ -25,6 +28,7 @@ def part_two(input_filename):
         if e1.intersection(e2):
             overlappers += 1
     return overlappers
+
 
 if __name__ == "__main__":
     print("*** PART ONE ***\n")

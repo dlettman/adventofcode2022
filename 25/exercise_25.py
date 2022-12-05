@@ -8,6 +8,7 @@ def part_one(input_filename):
     output = input
     return output
 
+
 def part_two(input_filename):
     input = helpers.parse_input(input_filename)
     if not input:
@@ -15,6 +16,7 @@ def part_two(input_filename):
     # do stuff here
     output = input
     return output
+
 
 if __name__ == "__main__":
     print("*** PART ONE ***\n")

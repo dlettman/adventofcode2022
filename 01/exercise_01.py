@@ -1,5 +1,6 @@
 from helpers import helpers
 
+
 def part_one(input_filename):
     input = helpers.parse_input(input_filename)
     elves = []
@@ -13,6 +14,7 @@ def part_one(input_filename):
     elves.append(current_tot)
     return max(elves)
 
+
 def part_two(input_filename):
     input = helpers.parse_input(input_filename)
     elves = []
@@ -25,6 +27,7 @@ def part_two(input_filename):
             current_tot += int(n)
     elves.append(current_tot)
     return sum(sorted(elves)[-3:])
+
 
 if __name__ == "__main__":
     print("*** PART ONE ***\n")
