@@ -92,10 +92,4 @@ stack 3, so you should combine these together and give the Elves the message
 _After the rearrangement procedure completes, what crate ends up on top of
 each stack?_
 
-To begin, [get your puzzle input](5/input).
-
-Answer:
-
-You can also [Shareon
-[Twitter](https://twitter.com/intent/tweet?text=%22Supply+Stacks%22+%2D+Day+5+%2D+Advent+of+Code+2022&url=https%3A%2F%2Fadventofcode%2Ecom%2F2022%2Fday%2F5&related=ericwastl&hashtags=AdventOfCode)
-[Mastodon](javascript:void\(0\);)] this puzzle.
+Your puzzle answer was `LJSVLTWQM`.
