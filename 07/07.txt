@@ -107,10 +107,4 @@ directories are `a` and `e`; the sum of their total sizes is `_95437_` (94853
 Find all of the directories with a total size of at most 100000. _What is the
 sum of the total sizes of those directories?_
 
-To begin, [get your puzzle input](7/input).
-
-Answer:
-
-You can also [Shareon
-[Twitter](https://twitter.com/intent/tweet?text=%22No+Space+Left+On+Device%22+%2D+Day+7+%2D+Advent+of+Code+2022&url=https%3A%2F%2Fadventofcode%2Ecom%2F2022%2Fday%2F7&related=ericwastl&hashtags=AdventOfCode)
-[Mastodon](javascript:void\(0\);)] this puzzle.
+Your puzzle answer was `1428881`.
