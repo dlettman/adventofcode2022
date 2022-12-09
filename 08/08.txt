@@ -46,10 +46,4 @@ total of `_21_` trees are visible in this arrangement.
 
 Consider your map; _how many trees are visible from outside the grid?_
 
-To begin, [get your puzzle input](8/input).
-
-Answer:
-
-You can also [Shareon
-[Twitter](https://twitter.com/intent/tweet?text=%22Treetop+Tree+House%22+%2D+Day+8+%2D+Advent+of+Code+2022&url=https%3A%2F%2Fadventofcode%2Ecom%2F2022%2Fday%2F8&related=ericwastl&hashtags=AdventOfCode)
-[Mastodon](javascript:void\(0\);)] this puzzle.
+Your puzzle answer was `1827`.
