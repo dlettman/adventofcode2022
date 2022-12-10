@@ -287,10 +287,4 @@ So, there are `_13_` positions the tail visited at least once.
 Simulate your complete hypothetical series of motions. _How many positions
 does the tail of the rope visit at least once?_
 
-To begin, [get your puzzle input](9/input).
-
-Answer:
-
-You can also [Shareon
-[Twitter](https://twitter.com/intent/tweet?text=%22Rope+Bridge%22+%2D+Day+9+%2D+Advent+of+Code+2022&url=https%3A%2F%2Fadventofcode%2Ecom%2F2022%2Fday%2F9&related=ericwastl&hashtags=AdventOfCode)
-[Mastodon](javascript:void\(0\);)] this puzzle.
+Your puzzle answer was `5710`.
