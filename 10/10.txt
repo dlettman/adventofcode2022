@@ -216,10 +216,4 @@ The sum of these signal strengths is `_13140_`.
 Find the signal strength during the 20th, 60th, 100th, 140th, 180th, and 220th
 cycles. _What is the sum of these six signal strengths?_
 
-To begin, [get your puzzle input](10/input).
-
-Answer:
-
-You can also [Shareon
-[Twitter](https://twitter.com/intent/tweet?text=%22Cathode%2DRay+Tube%22+%2D+Day+10+%2D+Advent+of+Code+2022&url=https%3A%2F%2Fadventofcode%2Ecom%2F2022%2Fday%2F10&related=ericwastl&hashtags=AdventOfCode)
-[Mastodon](javascript:void\(0\);)] this puzzle.
+Your puzzle answer was `16020`.
