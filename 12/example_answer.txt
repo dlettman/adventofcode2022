@@ -1,0 +1,15 @@
+S</em>abqponm
+abcryxxl
+accsz<em>E</em>xk
+acctuvwj
+abdefghi
+</code></pre>
+<p>Here, you start in the top-left corner; your goal is near the middle. You could start by moving down or right, but eventually you'll need to head toward the <code>e</code> at the bottom. From there, you can spiral around to the goal:</p>
+<pre><code>v..v&lt;&lt;&lt;&lt;
+&gt;v.vv&lt;&lt;^
+.&gt;vv&gt;E^^
+..v&gt;&gt;&gt;^^
+..&gt;&gt;&gt;&gt;&gt;^
+</code></pre>
+<p>In the above diagram, the symbols indicate whether the path exits each square moving up (<code>^</code>), down (<code>v</code>), left (<code>&lt;</code>), or right (<code>&gt;</code>). The location that should get the best signal is still <code>E</code>, and <code>.</code> marks unvisited squares.</p>
+<p>This path reaches the goal in <code><em>31

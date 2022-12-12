@@ -256,10 +256,4 @@ Figure out which monkeys to chase by counting how many items they inspect over
 20 rounds. _What is the level of monkey business after 20 rounds of stuff-
 slinging simian shenanigans?_
 
-To begin, [get your puzzle input](11/input).
-
-Answer:
-
-You can also [Shareon
-[Twitter](https://twitter.com/intent/tweet?text=%22Monkey+in+the+Middle%22+%2D+Day+11+%2D+Advent+of+Code+2022&url=https%3A%2F%2Fadventofcode%2Ecom%2F2022%2Fday%2F11&related=ericwastl&hashtags=AdventOfCode)
-[Mastodon](javascript:void\(0\);)] this puzzle.
+Your puzzle answer was `113232`.

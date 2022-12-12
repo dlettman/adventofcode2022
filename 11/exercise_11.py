@@ -49,7 +49,7 @@ def parse_monkey_info(monkey):
     return number, starting_items, operation, divisor, true_result, false_result
 
 
-def parse_operation(operation):
+def parse_operation(operation):  # Hacky!
     operator, number = operation[4:].split(" ")
     if number == "old":
         return lambda x: mul(x, x)
