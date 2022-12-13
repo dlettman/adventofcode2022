@@ -4,12 +4,11 @@ accsz<em>E</em>xk
 acctuvwj
 abdefghi
 </code></pre>
-<p>Here, you start in the top-left corner; your goal is near the middle. You could start by moving down or right, but eventually you'll need to head toward the <code>e</code> at the bottom. From there, you can spiral around to the goal:</p>
-<pre><code>v..v&lt;&lt;&lt;&lt;
-&gt;v.vv&lt;&lt;^
-.&gt;vv&gt;E^^
-..v&gt;&gt;&gt;^^
-..&gt;&gt;&gt;&gt;&gt;^
+<p>Now, there are six choices for starting position (five marked <code>a</code>, plus the square marked <code>S</code> that counts as being at elevation <code>a</code>). If you start at the bottom-left square, you can reach the goal most quickly:</p>
+<pre><code>...v&lt;&lt;&lt;&lt;
+...vv&lt;&lt;^
+...v&gt;E^^
+.&gt;v&gt;&gt;&gt;^^
+&gt;^&gt;&gt;&gt;&gt;&gt;^
 </code></pre>
-<p>In the above diagram, the symbols indicate whether the path exits each square moving up (<code>^</code>), down (<code>v</code>), left (<code>&lt;</code>), or right (<code>&gt;</code>). The location that should get the best signal is still <code>E</code>, and <code>.</code> marks unvisited squares.</p>
-<p>This path reaches the goal in <code><em>31
+<p>This path reaches the goal in only <code><em>29

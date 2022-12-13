@@ -1,0 +1,263 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /Users/dlettman/projects/personal/adventofcode2022/12
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 170
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 44
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 564
+    content: "\e[?2004hDerek-Lettman-JTGH422J6W:12 dlettman$ "
+  - delay: 2507
+    content: l
+  - delay: 62
+    content: s
+  - delay: 97
+    content: "\r\n\e[?2004l\r"
+  - delay: 13
+    content: "12.txt\t\t\tdemo.yml\t\texample_answer.txt\texercise_12.py\t\tinput.txt\t\tinputtest.txt\r\n\e[?2004hDerek-Lettman-JTGH422J6W:12 dlettman$ "
+  - delay: 1711
+    content: p
+  - delay: 91
+    content: 'y'
+  - delay: 163
+    content: t
+  - delay: 94
+    content: h
+  - delay: 60
+    content: o
+  - delay: 128
+    content: 'n'
+  - delay: 146
+    content: ' '
+  - delay: 2830
+    content: e
+  - delay: 217
+    content: x
+  - delay: 220
+    content: e
+  - delay: 126
+    content: r
+  - delay: 401
+    content: "\a"
+  - delay: 761
+    content: "\b\b\b\b\b\b\b\b\b\b\bls\e[K"
+  - delay: 495
+    content: "\b\bpython exer"
+  - delay: 677
+    content: c
+  - delay: 206
+    content: 'ise_12.py '
+  - delay: 1417
+    content: "\r\n\e[?2004l\r"
+  - delay: 87
+    content: "Traceback (most recent call last):\r\n  File \"/Users/dlettman/projects/personal/adventofcode2022/venv/lib/python3.9/site-packages/numpy/core/__init__.py\", line 23, in <module>\r\n    from . import multiarray\r\n  File \"/Users/dlettman/projects/personal/adventofcode2022/venv/lib/python3.9/site-packages/numpy/core/multiarray.py\", line 10, in <module>\r\n    from . import overrides\r\n  File \"/Users/dlettman/projects/personal/adventofcode2022/venv/lib/python3.9/site-packages/numpy/core/overrides.py\", line 6, in <module>\r\n    from numpy.core._multiarray_umath import (\r\nImportError: dlopen(/Users/dlettman/projects/personal/adventofcode2022/venv/lib/python3.9/site-packages/numpy/core/_multiarray_umath.cpython-39-darwin.so, 0x0002): tried: '/Users/dlettman/projects/personal/adventofcode2022/venv/lib/python3.9/site-packages/numpy/core/_multiarray_umath.cpython-39-darwin.so' (mach-o file, but is an incompatible architecture (have (arm64), need (x86_64)))\r\n\r\nDuring handling of the above exception, another exception occurred:\r\n\r\nTraceback (most recent call last):\r\n  File \"/Users/dlettman/projects/personal/adventofcode2022/12/exercise_12.py\", line 8, in <module>\r\n    import numpy\r\n  File \"/Users/dlettman/projects/personal/adventofcode2022/venv/lib/python3.9/site-packages/numpy/__init__.py\", line 140, in <module>\r\n    from . import core\r\n  File \"/Users/dlettman/projects/personal/adventofcode2022/venv/lib/python3.9/site-packages/numpy/core/__init__.py\", line 49, in <module>\r\n    raise ImportError(msg)\r\nImportError: \r\n\r\nIMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!\r\n\r\nImporting the numpy C-extensions failed. This error can happen for\r\nmany reasons, often due to issues with your setup or how NumPy was\r\ninstalled.\r\n\r\nWe have compiled some common reasons and troubleshooting tips at:\r\n\r\n    https://numpy.org/devdocs/user/troubleshooting-importerror.html\r\n\r\nPlease note and check the following:\r\n\r\n  * The Python version is: Python3.9 from \"/Users/dlettman/projects/personal/adventofcode2022/venv/bin/python\"\r\n  * The NumPy version is: \"1.23.5\"\r\n\r\nand make sure that they are the versions you expect.\r\nPlease carefully study the documentation linked above for further help.\r\n\r\nOriginal error was: dlopen(/Users/dlettman/projects/personal/adventofcode2022/venv/lib/python3.9/site-packages/numpy/core/_multiarray_umath.cpython-39-darwin.so, 0x0002): tried: '/Users/dlettman/projects/personal/adventofcode2022/venv/lib/python3.9/site-packages/numpy/core/_multiarray_umath.cpython-39-darwin.so' (mach-o file, but is an incompatible architecture (have (arm64), need (x86_64)))\r\n\r\n\e[?2004hDerek-Lettman-JTGH422J6W:12 dlettman$ "
+  - delay: 11386
+    content: c
+  - delay: 192
+    content: d
+  - delay: 98
+    content: ' '
+  - delay: 122
+    content: .
+  - delay: 151
+    content: .
+  - delay: 103
+    content: "\r\n\e[?2004l\r\e[?2004hDerek-Lettman-JTGH422J6W:adventofcode2022 dlettman$ "
+  - delay: 244
+    content: s
+  - delay: 107
+    content: o
+  - delay: 101
+    content: u
+  - delay: 77
+    content: r
+  - delay: 228
+    content: c
+  - delay: 84
+    content: e
+  - delay: 68
+    content: ' '
+  - delay: 229
+    content: .
+  - delay: 545
+    content: /
+  - delay: 448
+    content: v
+  - delay: 158
+    content: env/
+  - delay: 804
+    content: b
+  - delay: 213
+    content: in/
+  - delay: 733
+    content: a
+  - delay: 156
+    content: "\activate"
+  - delay: 346
+    content: "\r\n\e[?2004l\r"
+  - delay: 22
+    content: "\e[?2004h(venv) Derek-Lettman-JTGH422J6W:adventofcode2022 dlettman$ "
+  - delay: 2698
+    content: p
+  - delay: 122
+    content: 'y'
+  - delay: 181
+    content: t
+  - delay: 87
+    content: h
+  - delay: 73
+    content: o
+  - delay: 137
+    content: 'n'
+  - delay: 514
+    content: "\b\b\b\b\b\bsource ./venv/bin/activate"
+  - delay: 421
+    content: "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\bcd ..\e[K"
+  - delay: 321
+    content: "\b\b\b\b\bpython exercise_12.py "
+  - delay: 762
+    content: "\r\n\e[?2004l\r"
+  - delay: 53
+    content: "python: can't open file '/Users/dlettman/projects/personal/adventofcode2022/exercise_12.py': [Errno 2] No such file or directory\r\n\e[?2004h(venv) Derek-Lettman-JTGH422J6W:adventofcode2022 dlettman$ "
+  - delay: 528
+    content: 'python exercise_12.py '
+  - delay: 443
+    content: "\b\b\b"
+  - delay: 315
+    content: "\b\b\b"
+  - delay: 330
+    content: "\b"
+  - delay: 270
+    content: "\b\b\b\b\b\b\b\b"
+  - delay: 404
+    content: "\e[1@1"
+  - delay: 103
+    content: "\e[1@2"
+  - delay: 195
+    content: "\e[1@/"
+  - delay: 146
+    content: "\r\n\e[?2004l\r"
+  - delay: 38
+    content: "Traceback (most recent call last):\r\n  File \"/Users/dlettman/projects/personal/adventofcode2022/venv/lib/python3.9/site-packages/numpy/core/__init__.py\", line 23, in <module>\r\n    from . import multiarray\r\n  File \"/Users/dlettman/projects/personal/adventofcode2022/venv/lib/python3.9/site-packages/numpy/core/multiarray.py\", line 10, in <module>\r\n    from . import overrides\r\n  File \"/Users/dlettman/projects/personal/adventofcode2022/venv/lib/python3.9/site-packages/numpy/core/overrides.py\", line 6, in <module>\r\n    from numpy.core._multiarray_umath import (\r\nImportError: dlopen(/Users/dlettman/projects/personal/adventofcode2022/venv/lib/python3.9/site-packages/numpy/core/_multiarray_umath.cpython-39-darwin.so, 0x0002): tried: '/Users/dlettman/projects/personal/adventofcode2022/venv/lib/python3.9/site-packages/numpy/core/_multiarray_umath.cpython-39-darwin.so' (mach-o file, but is an incompatible architecture (have (arm64), need (x86_64)))\r\n\r\nDuring handling of the above exception, another exception occurred:\r\n\r\nTraceback (most recent call last):\r\n  File \"/Users/dlettman/projects/personal/adventofcode2022/12/exercise_12.py\", line 8, in <module>\r\n    import numpy\r\n  File \"/Users/dlettman/projects/personal/adventofcode2022/venv/lib/python3.9/site-packages/numpy/__init__.py\", line 140, in <module>\r\n    from . import core\r\n  File \"/Users/dlettman/projects/personal/adventofcode2022/venv/lib/python3.9/site-packages/numpy/core/__init__.py\", line 49, in <module>\r\n    raise ImportError(msg)\r\nImportError: \r\n\r\nIMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!\r\n\r\nImporting the numpy C-extensions failed. This error can happen for\r\nmany reasons, often due to issues with your setup or how NumPy was\r\ninstalled.\r\n\r\nWe have compiled some common reasons and troubleshooting tips at:\r\n\r\n    https://numpy.org/devdocs/user/troubleshooting-importerror.html\r\n\r\nPlease note and check the following:\r\n\r\n  * The Python version is: Python3.9 from \"/Users/dlettman/projects/personal/adventofcode2022/venv/bin/python\"\r\n  * The NumPy version is: \"1.23.5\"\r\n\r\nand make sure that they are the versions you expect.\r\nPlease carefully study the documentation linked above for further help.\r\n\r\nOriginal error was: dlopen(/Users/dlettman/projects/personal/adventofcode2022/venv/lib/python3.9/site-packages/numpy/core/_multiarray_umath.cpython-39-darwin.so, 0x0002): tried: '/Users/dlettman/projects/personal/adventofcode2022/venv/lib/python3.9/site-packages/numpy/core/_multiarray_umath.cpython-39-darwin.so' (mach-o file, but is an incompatible architecture (have (arm64), need (x86_64)))\r\n\r\n\e[?2004h(venv) Derek-Lettman-JTGH422J6W:adventofcode2022 dlettman$ "
+  - delay: 173433
+    content: "\e[7mbrew install imagemagick ttyrec\e[27m"
+  - delay: 509
+    content: "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\bbrew install imagemagick ttyrec\r\n\e[?2004l\r"
+  - delay: 4887
+    content: "^C\r\n\e[?2004h(venv) Derek-Lettman-JTGH422J6W:adventofcode2022 dlettman$ "
+  - delay: 467
+    content: e
+  - delay: 211
+    content: x
+  - delay: 93
+    content: i
+  - delay: 127
+    content: t
+  - delay: 73
+    content: "\r\n\e[?2004l\rlogout\r\n"
