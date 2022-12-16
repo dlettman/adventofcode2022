@@ -178,10 +178,4 @@ any new sand takes before falling forever is shown here with `~`:
 Using your scan, simulate the falling sand. _How many units of sand come to
 rest before sand starts flowing into the abyss below?_
 
-To begin, [get your puzzle input](14/input).
-
-Answer:
-
-You can also [Shareon
-[Twitter](https://twitter.com/intent/tweet?text=%22Regolith+Reservoir%22+%2D+Day+14+%2D+Advent+of+Code+2022&url=https%3A%2F%2Fadventofcode%2Ecom%2F2022%2Fday%2F14&related=ericwastl&hashtags=AdventOfCode)
-[Mastodon](javascript:void\(0\);)] this puzzle.
+Your puzzle answer was `799`.
