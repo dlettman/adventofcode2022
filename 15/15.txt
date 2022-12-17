@@ -141,5 +141,3 @@ Consult the report from the sensors you just deployed. _In the row
 where`y=2000000`, how many positions cannot contain a beacon?_
 
 Your puzzle answer was `4951427`.
-
-The first half of this puzzle is complete! It provides one gold star: *
