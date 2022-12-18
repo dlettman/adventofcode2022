@@ -375,10 +375,4 @@ units tall.
 _How many units tall will the tower of rocks be after 2022 rocks have stopped
 falling?_
 
-To begin, [get your puzzle input](17/input).
-
-Answer:
-
-You can also [Shareon
-[Twitter](https://twitter.com/intent/tweet?text=%22Pyroclastic+Flow%22+%2D+Day+17+%2D+Advent+of+Code+2022&url=https%3A%2F%2Fadventofcode%2Ecom%2F2022%2Fday%2F17&related=ericwastl&hashtags=AdventOfCode)
-[Mastodon](javascript:void\(0\);)] this puzzle.
+Your puzzle answer was `3065`.

@@ -172,10 +172,12 @@ def part_two(inp):
                 next_state = None
                 hum_options_tried, ele_options_tried = "", ""
                 print("open nodes = ", state.open_node_keys)
-                for _ in range(BRANCH_COUNT):
+                branches_explored = 0
+                while branches_explored < BRANCH_COUNT:
                     hum_dest = ""
                     disallowed_node_keys = state.open_node_keys
                     if state.cycle == state.hum_time_active:  # human takes their turn
+                        branches_explored += 1
                         hum_curr_node: Node = graph[state.hum_node]
                         option = hum_curr_node.humele_find_best_option_from_here(
                             STARTING_TIME - state.cycle,
@@ -187,7 +189,36 @@ def part_two(inp):
                         print("hum going to ", next_state.hum_node)
                         hum_options_tried += " " + next_state.hum_node
                         hum_dest =  next_state.hum_node
-                    if state.cycle == state.ele_time_active: # ele takes their turn
+                        while branches_explored < BRANCH_COUNT:
+                            branches_explored += 1
+                            ele_curr_node: Node = graph[state.ele_node]
+                            option = ele_curr_node.humele_find_best_option_from_here(
+                                STARTING_TIME - state.cycle,
+                                disallowed_node_keys + " " + ele_options_tried + " " + hum_dest,
+                            )
+                            if next_state:
+                                print("hum and ele both acting")
+                                next_state = make_humele_state_using_option(next_state, option, actor="elephant")
+                            else:
+                                next_state = make_humele_state_using_option(state, option, actor="elephant")
+                            if not next_state:
+                                continue
+                            print("ele going to ", next_state.ele_node)
+                            disallowed_node_keys += " " + next_state.ele_node
+                            ele_options_tried += " " + next_state.ele_node
+                            if next_state:
+                                next_state = HumEleState(next_state.golf_score, next_state.hum_node,
+                                                         next_state.hum_time_active, next_state.ele_node,
+                                                         next_state.ele_time_active, next_state.open_node_keys,
+                                                         new_cycle)
+                                heapq.heappush(heap, next_state)
+                            else:
+                                next_state = HumEleState(state.golf_score, state.hum_node, state.hum_time_active,
+                                                         state.ele_node, state.ele_time_active, state.open_node_keys,
+                                                         new_cycle)
+                                heapq.heappush(heap, next_state)
+                            next_state = None
+                    elif state.cycle == state.ele_time_active: # ele takes their turn
                         ele_curr_node: Node = graph[state.ele_node]
                         option = ele_curr_node.humele_find_best_option_from_here(
                             STARTING_TIME - state.cycle,
