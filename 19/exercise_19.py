@@ -129,6 +129,7 @@ def play_factorio(input_filename, rounds=24):
         #  Main 'gameplay' loop
         while queue:
             cur_state = queue.popleft()
+            print(cur_state)
             if cur_state in seen_states:  # Does this help? Maybe.
                 continue
             seen_states.add(cur_state)
@@ -149,21 +150,21 @@ def play_factorio(input_filename, rounds=24):
                 queue.append(option)
 
         # compare scores for this blueprint
-        num_geodes = max([option.ingredients["geode"] for option in options])
+        num_geodes = 0
+        for option in queue:
+            num_geodes = max([num_geodes, option.ingredients["geode"]])
         max_geodes[idx] = num_geodes
-
     if rounds == 32:
         print(max_geodes)
         return prod(max_geodes.values())
-
     return sum([k * v for k, v in max_geodes.items()])
 
 
 if __name__ == "__main__":
     print("*** PART ONE ***\n")
     print(f"Test result = {play_factorio('inputtest.txt')}\n")
-    print(f"REAL RESULT = {play_factorio('input.txt')}\n\n")
-    print("*** PART TWO ***\n")
-    print(f"Test result = {play_factorio('inputtest.txt', rounds = 32)}\n")
-    print(f"REAL RESULT = {play_factorio('input.txt', rounds = 32)}")
+    # print(f"REAL RESULT = {play_factorio('input.txt')}\n\n")
+    # print("*** PART TWO ***\n")
+    # print(f"Test result = {play_factorio('inputtest.txt', rounds = 32)}\n")
+    # print(f"REAL RESULT = {play_factorio('input.txt', rounds = 32)}")
 
