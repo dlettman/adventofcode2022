@@ -112,7 +112,6 @@ def part_two(input_filename):
             return round + 1
         elf_map = new_elf_map
         directions.rotate(-1)
-    return calculate_score(elf_map)
 
 
 if __name__ == "__main__":
