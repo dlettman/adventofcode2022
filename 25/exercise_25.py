@@ -21,19 +21,19 @@ def part_one(input_filename):
 def count(score):
     string = ""
     while score != 0:
-        remaining = score % 5
-        if remaining == 0:
+        remainder = score % 5
+        if remainder == 0:
             string = "0" + string
-        elif remaining == 1:
+        elif remainder == 1:
             string = "1" + string
             score -= 1
-        elif remaining == 2:
+        elif remainder == 2:
             string = "2" + string
             score -= 2
-        elif remaining == 3:
+        elif remainder == 3:
             string = "=" + string
             score += 2
-        elif remaining == 4:
+        elif remainder == 4:
             string = "-" + string
             score += 1
         score = score // 5
