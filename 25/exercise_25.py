@@ -15,10 +15,10 @@ def part_one(input_filename):
             elif char == "=":
                 thisnum -= power * 2
         score += thisnum
-    return count(score)
+    return int_to_snafu(score)
 
 
-def count(score):
+def int_to_snafu(score):
     string = ""
     while score != 0:
         remainder = score % 5

@@ -103,7 +103,7 @@ def part_two(input_filename):
         blizzards = move_blizzards(walls, blizzards, max_x, max_y)
     step_1_end = part_one(input_filename, start=(1,0), end=None, start_minute=0, blizzard_snapshots=blizzard_snapshots)
     print(f"Step one end = {step_1_end}")
-    step_2_end = part_one(input_filename, start=None, end=(1,0), start_minute=step_1_end, blizzard_snapshots=blizzard_snapshots, debug=False)
+    step_2_end = part_one(input_filename, start=None, end=(1,0), start_minute=step_1_end, blizzard_snapshots=blizzard_snapshots)
     print(f"Step two end = {step_2_end}")
     step_3_end = part_one(input_filename, start=(1,0), end=None, blizzard_snapshots=blizzard_snapshots, start_minute=step_2_end)
     return step_3_end + 1
